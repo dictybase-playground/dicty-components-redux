@@ -1,11 +1,4 @@
 {
-  "presets": [
-    [
-      "es2015",
-      {
-        "modules": false
-      }
-    ]
-  ],
+  "presets": ["babel-preset-es2015-rollup"],
   "plugins": ["external-helpers", "transform-object-rest-spread"]
 }
