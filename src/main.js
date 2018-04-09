@@ -17,12 +17,7 @@ export { default as manageStateStorage } from "./middleware/storage.js"
 export { default as authReducer } from "./reducers/auth.js"
 
 // store
-export { authArg } from "./store/store.js"
+export { authStorage } from "./store/store.js"
 
 // utils
 export { hydrateStore, hydrateAll } from "./utils/hydrateStore.js"
-export {
-  fetchBySlugResource,
-  fetchByIdResource,
-  oauthEndpointResource
-} from "./utils/fetchResources.js"

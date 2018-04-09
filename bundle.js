@@ -176,6 +176,8 @@ var authArg = {
   namespace: "auth"
 };
 
+var authStorage = manageStateStorage(authArg);
+
 //      
 
 
@@ -220,29 +222,6 @@ var hydrateAll = function hydrateAll() {
   return combinedStates;
 };
 
-exports.fetchBySlugResource = void 0;
-    exports.fetchByIdResource = void 0;
-    exports.oauthEndpointResource = void 0;
-
-if (process.env.REACT_APP_API_SERVER) {
-  // set URL base for fetching by slug
-  var fetchBySlugBase = "/contents/slug";
-  exports.fetchBySlugResource = "" + process.env.REACT_APP_API_SERVER + fetchBySlugBase;
-  // set URL base for fetching by ID
-  var fetchByIdBase = "/contents";
-  exports.fetchByIdResource = "" + process.env.REACT_APP_API_SERVER + fetchByIdBase;
-} else {
-  exports.fetchBySlugResource = "http://localhost:8080/contents/slug";
-  exports.fetchByIdResource = "http://localhost:8080/contents";
-}
-
-if (process.env.REACT_APP_AUTH_SERVER) {
-  var oauthEndpointBase = "/tokens";
-  exports.oauthEndpointResource = "" + process.env.REACT_APP_AUTH_SERVER + oauthEndpointBase;
-} else {
-  exports.oauthEndpointResource = "http://localhost:9999/tokens";
-}
-
 // actions
 
 exports.requestLogin = requestLogin;
@@ -253,6 +232,6 @@ exports.logoutUser = logoutUser;
 exports.types = types;
 exports.manageStateStorage = manageStateStorage;
 exports.authReducer = authReducer;
-exports.authArg = authArg;
+exports.authStorage = authStorage;
 exports.hydrateStore = hydrateStore;
 exports.hydrateAll = hydrateAll;
