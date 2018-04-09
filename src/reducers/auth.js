@@ -1,5 +1,5 @@
 // @flow
-import { dsctypes } from "constants/dsctypes"
+import { types } from "../constants/types"
 
 const {
   LOGIN_REQUEST,
@@ -7,7 +7,7 @@ const {
   LOGIN_FAILURE,
   LOGOUT_REQUEST,
   LOGOUT_SUCCESS
-} = dsctypes
+} = types
 
 const authReducer = (state: Object = {}, action: Object) => {
   switch (action.type) {
