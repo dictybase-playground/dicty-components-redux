@@ -104,6 +104,15 @@ var manageStateStorage = function manageStateStorage(_ref) {
   };
 };
 
+var authArg = {
+  save_action: types.LOGIN_SUCCESS,
+  remove_action: types.LOGOUT_SUCCESS,
+  key: "auth",
+  namespace: "auth"
+};
+
+var authStorage = manageStateStorage(authArg);
+
 var _extends = Object.assign || function (target) {
   for (var i = 1; i < arguments.length; i++) {
     var source = arguments[i];
@@ -117,66 +126,6 @@ var _extends = Object.assign || function (target) {
 
   return target;
 };
-
-//      
-
-var LOGIN_REQUEST$1 = types.LOGIN_REQUEST,
-    LOGIN_SUCCESS$1 = types.LOGIN_SUCCESS,
-    LOGIN_FAILURE$1 = types.LOGIN_FAILURE,
-    LOGOUT_REQUEST = types.LOGOUT_REQUEST,
-    LOGOUT_SUCCESS$1 = types.LOGOUT_SUCCESS;
-
-
-var authReducer = function authReducer() {
-  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-  var action = arguments[1];
-
-  switch (action.type) {
-    case LOGIN_REQUEST$1:
-      return _extends({}, state, {
-        isFetching: action.isFetching,
-        isAuthenticated: false,
-        provider: action.provider
-      });
-    case LOGIN_SUCCESS$1:
-      return _extends({}, state, {
-        isFetching: action.isFetching,
-        isAuthenticated: action.token ? true : false,
-        token: action.token,
-        user: action.user
-      });
-    case LOGIN_FAILURE$1:
-      return _extends({}, state, {
-        isFetching: action.isFetching,
-        isAuthenticated: false,
-        error: action.error,
-        provider: null
-      });
-    case LOGOUT_REQUEST:
-      return _extends({}, state, {
-        isFetching: action.isFetching
-      });
-    case LOGOUT_SUCCESS$1:
-      return _extends({}, state, {
-        isFetching: action.isFetching,
-        isAuthenticated: false,
-        provider: null,
-        user: null,
-        token: null
-      });
-    default:
-      return state;
-  }
-};
-
-var authArg = {
-  save_action: types.LOGIN_SUCCESS,
-  remove_action: types.LOGOUT_SUCCESS,
-  key: "auth",
-  namespace: "auth"
-};
-
-var authStorage = manageStateStorage(authArg);
 
 //      
 
@@ -231,7 +180,6 @@ exports.receiveLogout = receiveLogout;
 exports.logoutUser = logoutUser;
 exports.types = types;
 exports.manageStateStorage = manageStateStorage;
-exports.authReducer = authReducer;
 exports.authStorage = authStorage;
 exports.hydrateStore = hydrateStore;
 exports.hydrateAll = hydrateAll;

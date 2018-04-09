@@ -28,10 +28,6 @@ These are used via `import { name } from "dicty-components-redux"`.
 
 * manageStateStorage
 
-**Reducers:**
-
-* authReducer
-
 **Store:**
 
 * authStorage (this needs to be added into your `applyMiddleware()` wrapper)
