@@ -2,7 +2,7 @@
   "name": "dicty-components-redux",
   "description": "Reusable Redux content",
   "version": "1.0.0",
-  "main": "src/main.js",
+  "main": "bundle.js",
   "scripts": {
     "build": "rollup -c"
   },
