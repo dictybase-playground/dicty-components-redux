@@ -8,7 +8,7 @@ These are used via `import { name } from "dicty-components-redux"`.
 
 ### Items that can be used
 
-Reusable actions:
+**Reusable actions:**
 
 * requestLogin
 * receiveLogin
@@ -16,7 +16,7 @@ Reusable actions:
 * receiveLogout
 * logoutUser
 
-Constants:
+**Constants:**
 
 * LOGIN_REQUEST
 * LOGIN_SUCCESS
@@ -24,19 +24,19 @@ Constants:
 * LOGOUT_REQUEST
 * LOGOUT_SUCCESS
 
-Middleware:
+**Middleware:**
 
 * manageStateStorage
 
-Reducers:
+**Reducers:**
 
 * authReducer
 
-Store:
+**Store:**
 
 * authStorage (this needs to be added into your `applyMiddleware()` wrapper)
 
-Utilities:
+**Utilities:**
 
 * hydrateStore
 * hydrateAll
