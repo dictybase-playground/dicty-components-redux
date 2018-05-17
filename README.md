@@ -8,14 +8,6 @@ These are used via `import { name } from "dicty-components-redux"`.
 
 ### Items that can be used
 
-**Reusable actions:**
-
-* [requestLogin](/src/actions/auth.js)
-* [receiveLogin](/src/actions/auth.js)
-* [loginError](/src/actions/auth.js)
-* [receiveLogout](/src/actions/auth.js)
-* [logoutUser](/src/actions/auth.js)
-
 **Constants:**
 
 * LOGIN_REQUEST
@@ -36,10 +28,6 @@ This function has four parameters:
 * `remove_action`: the action type for removing the state
 * `key`: the key that will be used to save part of the store's state (leaving blank will let entire state be saved)
 * `namespace`: the key that will be used to save to localStorage
-
-**Reducers:**
-
-* [authReducer](/src/reducers/auth.js)
 
 **Store:**
 
