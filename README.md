@@ -23,8 +23,8 @@ In order to use this, you can create a new object like this:
 
 ```
 const authArg = {
-  save_action: dsctypes.LOGIN_SUCCESS,
-  remove_action: dsctypes.LOGOUT_SUCCESS,
+  save_action: types.LOGIN_SUCCESS,
+  remove_action: types.LOGOUT_SUCCESS,
   key: "auth",
   namespace: "auth"
 }
