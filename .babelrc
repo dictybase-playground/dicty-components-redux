@@ -1,4 +1,4 @@
 {
   "presets": ["es2015", "flow"],
-  "plugins": ["external-helpers", "transform-object-rest-spread"]
+  "plugins": ["transform-object-rest-spread"]
 }
