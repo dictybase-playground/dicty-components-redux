@@ -1,24 +1,14 @@
-## dicty-components-redux
+# dicty-components-redux
 
 This is the home for all reusable dicty Redux content and middleware.
 
-This project uses [rollup.js](https://rollupjs.org/guide/en) and can be installed by `npm install --save dictybase-playground/dicty-components-redux`.
+This project can be installed by `npm install --save dictybase-playground/dicty-components-redux`.
 
 These are used via `import { name } from "dicty-components-redux"`.
 
-### Items that can be used
+## Items that can be used
 
-**Constants:**
-
-* LOGIN_REQUEST
-* LOGIN_SUCCESS
-* LOGIN_FAILURE
-* LOGOUT_REQUEST
-* LOGOUT_SUCCESS
-
-These are self-explanatory.
-
-**Middleware:**
+### Middleware
 
 * [manageStateStorage](/src/middleware/storage.js)
 
@@ -29,11 +19,22 @@ This function has four parameters:
 * `key`: the key that will be used to save part of the store's state (leaving blank will let entire state be saved)
 * `namespace`: the key that will be used to save to localStorage
 
-**Store:**
+In order to use this, you can create a new object like this:
 
-* [authStorage](/src/store/store.js) (this needs to be added into your `applyMiddleware()` wrapper)
+```
+const authArg = {
+  save_action: dsctypes.LOGIN_SUCCESS,
+  remove_action: dsctypes.LOGOUT_SUCCESS,
+  key: "auth",
+  namespace: "auth"
+}
+```
 
-**Utilities:**
+Then pass this into your `applyMiddleware`:
+
+`applyMiddleware(manageStateStorage(authArg))`
+
+### Utilities
 
 * [hydrateStore](/src/utils/hydrateStore.js)
 * [hydrateAll](/src/utils/hydrateStore.js)
@@ -47,4 +48,4 @@ const initialState = hydrateAll(
 )
 ```
 
-For development, make changes as necessary in your branch then run `npm build` to create the updated `bundle.js` file.
+For development, make changes as necessary in your branch then run `npm run build` to create the updated build.
