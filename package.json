@@ -1,7 +1,7 @@
 {
   "name": "dicty-components-redux",
   "description": "Reusable Redux content",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "main": "lib/main.js",
   "scripts": {
     "build": "babel src --out-dir lib"
