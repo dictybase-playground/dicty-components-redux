@@ -3,8 +3,20 @@
   "description": "Reusable Redux content",
   "version": "2.0.0",
   "main": "lib/main.js",
+  "lint-staged": {
+    "*.{js,jsx,json,css}": [
+      "prettier --no-semi --trailing-comma all --jsx-bracket-same-line true --write",
+      "git add"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "precommit": "lint-staged"
+    }
+  },
   "scripts": {
-    "build": "babel src --out-dir lib"
+    "build": "babel src --out-dir lib",
+    "precommit": "lint-staged"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -12,6 +24,9 @@
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-flow": "^6.23.0",
-    "flow-bin": "^0.69.0"
+    "flow-bin": "^0.73.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.1.2",
+    "prettier": "^1.12.1"
   }
 }
