@@ -1,5 +1,9 @@
 # dicty-components-redux
 
+[![dependencies Status](https://david-dm.org/dictybase-playground/dicty-components-redux/status.svg?style=flat-square)](https://david-dm.org/dictybase-playground/dicty-components-redux)
+[![devDependencies Status](https://david-dm.org/dictybase-dicty-components-redux/dicty-components-redux/dev-status.svg?style=flat-square)](https://david-dm.org/dictybase-playground/dicty-components-redux?type=dev)
+[![peerDependencies Status](https://david-dm.org/dictybase-playground/dicty-components-redux/peer-status.svg?style=flat-square)](https://david-dm.org/dictybase-playground/dicty-components-redux?type=peer)
+
 This is the home for all reusable dicty Redux content and middleware.
 
 This project can be installed by `npm install --save dictybase-playground/dicty-components-redux`.
